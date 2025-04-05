@@ -1,0 +1,25 @@
+manifest:
+  version: 1.0
+
+  defaults:
+    remote: origin
+
+  remotes:
+    - name: origin
+      url-base: https://github.com/thanhthe23
+    - name: upstream
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: upstream
+      repo-path: zephyr
+      revision: v4.1.0
+      import: true
+    - name: application
+      remote: origin
+      repo-path: z-application
+      revision: main
+
+  self:
+    path: z-workspace
